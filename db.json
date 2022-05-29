@@ -1,18 +1,6 @@
 {
   "items": [
     {
-      "id": 1,
-      "name": "Yogurt",
-      "category": "Dairy",
-      "isInCart": false
-    },
-    {
-      "id": 2,
-      "name": "Pomegranate",
-      "category": "Produce",
-      "isInCart": false
-    },
-    {
       "id": 3,
       "name": "Lettuce",
       "category": "Produce",
@@ -43,28 +31,10 @@
       "id": 7
     },
     {
-      "name": "makaka",
-      "category": "Dessert",
-      "isInCart": false,
-      "id": 8
-    },
-    {
       "name": "milk",
       "category": "Produce",
       "isInCart": false,
       "id": 9
-    },
-    {
-      "name": "milk",
-      "category": "Produce",
-      "isInCart": false,
-      "id": 10
-    },
-    {
-      "name": "milk",
-      "category": "Produce",
-      "isInCart": false,
-      "id": 11
     },
     {
       "name": "orange",

@@ -1,9 +1,9 @@
 import React from "react";
 
-function Item({ item, onUpdateItem }) {
+function Item({ item, onUpdateItem, onDeleteItem }) {
   // add function to handle button click
   function handleAddToCartClick() {
-    // add fetch request
+   // Call onUpdateItem, passing the data returned from the fetch request
   fetch(`http://localhost:4000/items/${item.id}`, {
     method: "PATCH",
     headers: {
@@ -15,6 +15,14 @@ function Item({ item, onUpdateItem }) {
   })
     .then((r) => r.json())
     .then((updatedItem) => onUpdateItem(updatedItem));
+}
+
+function handleDeleteClick(){
+  fetch(`http://localhost:4000/items/${item.id}`, {
+    method: "DELETE",
+  })
+    .then((r) => r.json())
+    .then(() => onDeleteItem(item));
 }
     
   return (
@@ -28,7 +36,9 @@ function Item({ item, onUpdateItem }) {
       >
         {item.isInCart ? "Remove From" : "Add to"} Cart
       </button>
-      <button className="remove">Delete</button>
+      <button className="remove" onClick={handleDeleteClick}>
+        Delete
+      </button>
     </li>
   );
 }
